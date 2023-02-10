@@ -122,7 +122,7 @@ try {
 	public List<Employee> getAllEmployees() {
 
 		try {
-			System.out.println("Start to delete user from database");
+			System.out.println("Start to get all users from database");
 			
 			
 			String selectStatement = 
@@ -162,7 +162,7 @@ try {
 	@Override
 	public Employee getEmployee(int employeeId) {
 		try {
-			System.out.println("Start to delete user from database");
+			System.out.println("Start to select user from database");
 			
 			
 			String selectStatement   =  "SELECT * FROM employee WHERE id = ?";

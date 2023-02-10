@@ -76,5 +76,26 @@ PreparedStatement stmt = connection.prepareStatement(SELECT * FROM employee );
             return employees
 			
 ```
+
 se quiser trazer apenas um para  a lista então filtre o id
-stmt.setInt( posição do ? na query de seleção tendo o id no filtro SQL)
+stmt.setInt( posição do ? na query de seleção tendo o id no filtro SQL) 
+
+# estudo de controller 
+A classe controller extende da HTTPServlet
+e tem a anotation @WebServlet("/urlFinal")
+
+com o HttpServletRequest e HttpServletResponse nos métodos get e post é possivel ter acesso 
+as configurações do servlet
+
+# o get parameter é usado para pegar os parametros post
+
+request.getParameter("nome")
+
+
+# também tem o dispacher
+```
+RequestDispatcher dispatcher = request.getRequestDispatcher("/employeeView.jsp");
+                  dispatcher.forward(request, response);
+```
+
+só funciona o x-www-form-urlencoded para receber parametros POST 
